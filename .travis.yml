@@ -11,5 +11,5 @@ script:
 
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
-      docker run -t node:7.9 node --help
+      docker run -t node:7.9 node --help;
     fi
