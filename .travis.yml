@@ -8,3 +8,8 @@ before_install:
 
 script:
   - docker run -t node:7.9 node -v
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker run -t node:7.9 node --help
+    fi
